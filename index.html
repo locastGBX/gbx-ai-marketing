@@ -149,7 +149,10 @@ footer {
 
 <body>
 <header>
-    <img src="logo6.png" alt="GBX AI Marketing Logo" class="logo">
+    <div class="logo-container">
+        <img src="logo6.png" alt="GBX AI Marketing Logo" class="logo">
+        <p class="tagline">Empowering Small Businesses in KZN with AI Innovation</p>
+    </div>
 </header>
 
 <section class="hero">
@@ -198,6 +201,33 @@ footer {
 </a>
 
 <style>
+ .logo-container {
+    text-align: center;
+    position: relative;
+    padding: 40px 0;
+}
+
+.logo-container::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 220px;
+    height: 220px;
+    background: radial-gradient(circle, #00f5ff33, #38bdf833);
+    border-radius: 50%;
+    filter: blur(60px);
+    z-index: -1;
+}
+
+.tagline {
+    margin-top: 20px;
+    font-size: 16px;
+    font-weight: 500;
+    color: #00f5ff;
+    opacity: 0.9;
+}
 .whatsapp-float {
     position: fixed;
     bottom: 25px;
